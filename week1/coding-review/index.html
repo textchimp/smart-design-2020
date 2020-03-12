@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Smart Design: Coding Review</title>
+
+		<link rel="stylesheet" href="../reveal/css/reset.css">
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+
+		<link rel="stylesheet" href="../reveal/css/theme/moon.css">
+		<!-- <link rel="stylesheet" href="../reveal/css/theme/night.css"> -->
+		<!-- theme options: beige black blood league moon night serif simple sky solarized white  -->
+		<!-- black, league (joel's), sky (pleasant), blood -->
+
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <style>
+     /* Local overrides */
+		 .reveal section .bigger {
+	    font-size: 1.3em !important;
+	  	}
+		 .reveal section .smaller {
+	    font-size: 0.8em !important;
+	  	}
+
+		 .reveal section .smallest {
+	    font-size: 0.7em !important;
+	  	}
+
+		 .reveal ul.spaced li {
+		 	 margin-bottom: 0.3em;
+		 }
+
+		 pre code {
+		 	/* max-width: 100% !important; */
+		 }
+
+		 code {
+			 /* display: inline; */
+			 background-color: #272922;
+		 }
+
+		 .reveal .hljs-ln-numbers {
+       opacity: 0.1;
+	   }
+
+ 		 .reveal section strong {
+ 		 	/* color: white; */
+ 			filter: sepia(1); /* compatibility with other themes? */
+ 			font-weight: normal;
+ 		 }
+
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+
+<section>
+	<h2>Smart Design // BUILD WORKSHOP</h2>
+	<hr/>
+	<h1>Coding Review</h1>
+	<h2>with Processing</h2>
+	<!-- <hr/> -->
+	<!-- <p>Luke Hammer</p>
+	<p>Carmen Minikus</p> -->
+</section>
+
+
+<section>
+   <h2>Agenda</h2>
+
+
+	<p>Here's what we'll cover:</p>
+
+  <ul>
+		<li>Workshop staff introduction</li>
+		<li>Overview / motivation</li>
+		<li>Core programming concepts</li>
+		<li>Group code-along in Processing</li>
+		<li>Arduino environment setup</li>
+	</ul>
+</section>
+
+<section>
+   <h2>WHO ARE WE?</h2>
+
+	 <br>
+		 <span class="fragm">Luke Hammer<br>(<a href="mailto:Luke.Hammer@uts.edu.au">Luke.Hammer@uts.edu.au</a>)</span>
+	 <br><br>
+		 <span class="fragm">Carmen Minikus<br>(<a href="mailto:Carmen.Minikus@uts.edu.au">Carmen.Minikus@uts.edu.au</a>)</span>
+	 <br><br>
+
+</section>
+
+<section>
+   <h2>Why Coding?</h2>
+	 <p>"I Thought This Was a Design Subject"</p>
+	 <hr/>
+	 <ul class="smaller">
+	 	<li class="fragm">The practical project of this subject is to build an <strong>Experience Prototype</strong>: this needs to include integrated electronics (that's the "smart" bit)</li>
+	 	<li class="fragm">To create the interaction effects you want using those electronic components, they need to talk to each other in the right way</li>
+	 	<li class="fragm">It's <strong><em>much</em> easier</strong> to control how they talk to each other by using a <strong>small computer</strong> as the core of the circuit (instead of doing it all in pure low-level electronics)
+		<li class="fragm">This computer is the <strong>microcontroller</strong> (i.e. Arduino), and we need to program it with code, to tell it how to control the electronics</li>
+	 </ul>
+
+</section>
+
+
+<section>
+	<h2>But Also! More Generally:</h2>
+
+	<ul>
+		<li class="fragm">Programming is a useful tool (a "transferable skill") for many domains: science, comms, games, art ... interesting and fun?</li>
+		<li class="fragm">...a highly structured, logical approach to solving problems, that you install in your brain</li>
+		<li class="fragm">...and then externalise to a computer</li>
+		<li class="fragm">Software is made out of language: we can create tools just by <em>describing them</em> clearly enough</li>
+	</ul>
+
+  <br><br>
+
+	<h3>Coding Literacy is the New Literacy</h3>
+
+</section>
+
+
+<section>
+	<h2>What is Coding?</h2>
+
+	<ul class="smaller">
+	  <li clas="fragm">Writing step-by-step instructions in a way a computer can understand in order to solve a problem</li>
+	  <li clas="fragm">...<em>i.e.</em>, being so specific about what you want done, that even a dumb literal computer can do it for you</li>
+		<li clas="fragm">...using a <strong>programming language</strong>, which is halfway between
+		  <ul>
+		    <li clas="fragm">vague-but-intuitive <em>human</em> languages, and</li>
+		    <li clas="fragm">the precise-but-difficult language of <em>mathematics</em></li>
+		  </ul>
+		</li>
+		<li clas="fragm">We'll be using the <strong>Processing</strong> and <strong>Arduino</strong> languages, which are very similar (luckily)</li>
+		<li clas="fragm">Warning! Get comfortable with "<strong>Error-Driven Development</strong>":
+			<ul>
+				<li clas="fragm"><strong>30%</strong> - writing lines of code</li>
+				<li clas="fragm"><strong>70%</strong> - figuring out why they don't work (usually <strong>typos</strong>)</li>
+			</ul>
+		</li>
+		<li>RTFM!</li>
+	</ul>
+
+</section>
+
+
+<section>
+	<h2>Why Processing?</h2>
+	<ul>
+		<li class="fragm">You've already seen it</li>
+		<li class="fragm">It's easy to install and get started with</li>
+		<li class="fragm">It's a very graphical/multimedia-oriented language, created for designers & visual artists</li>
+		<li class="fragm">It's very similar to Arduino</li>
+		<li class="fragm">You might end up connecting your prototype electronics to it anyway</li>
+	</ul>
+</section>
+
+
+<section>
+	<h2>Core Coding Concepts</h2>
+	<ul>
+		<li>Data types and variables</li>
+		<li>Functions</li>
+		<li>Conditionals (if/else)</li>
+		<li>Loops?</li>
+		<li>Variable scope?</li>
+	</ul>
+</section>
+
+
+
+
+<section>
+	<h2>Data Types</h2>
+	<p>"What kinds of information can I work with?"</p>
+
+	<ul class="smaller">
+		<li>Numbers:
+       <ul>
+       	<li><strong>int</strong> (integers/whole numbers): <code>1, 73542, -11, 0</code> ... </li>
+       	<li><strong>float</strong> (floating point numbers/decimals/fractions): <code>1.0, 0.5, 3.14159, -84632.1</code> ... </li>
+       </ul>
+		</li>
+		<li><strong>char</strong> (single characters): <code>'a', 'A', 'x', '&'</code> ...</li>
+		<li><strong>String</strong> (longer strings of characters): <code>"Hello World", "My name is Carmen", "Please enter password:"</code>...</li>
+		<li><strong>boolean</strong>: (true/false, yes/no answers): only <code>true, false</code></li>
+		<li>A list of any of the above types ("<strong>array</strong>"): <code>[]</code></li>
+		<li>Lots of custom types <em>i.e.</em> <code>PImage</code> for storing binary image data...</li>
+	</ul>
+
+</section>
+
+<section>
+	<h2>Variables</h2>
+	<ul class="smaller">
+		<li>A variable is a <strong>container</strong> for storing data</li>
+		<li>It lets us give a clear, unique name to a piece of information</li>
+		<li>It has two parts:
+      <ul>
+      	<li>a <strong>label</strong> (or "identifier")</li>
+      	<li>the <strong>value</strong> being stored</li>
+      </ul>
+		</li>
+		<li>To <em>declare</em> and <em>initialize</em> a variable:</li>
+	</ul>
+	<pre><code>// Give me a new integer var called age and store 25 into it
+int age = 25;
+
+// Once created, you can change what's stored in it
+age = 30;
+
+// You CAN'T change the TYPE of data you store in it
+age = "Hello!";   // ❌ NO
+
+String greeting = "Hello";    // ✅  OK
+	</code></pre>
+</section>
+
+
+<section>
+	<h2>Functions</h2>
+	<ul class="smaller">
+		<li>A function is a named container for some related lines of code</li>
+		<li>One of the most important building blocks of code: most programs are just functions calling each other</li>
+		<li>They can sometimes have inputs (arguments) and outputs (return values) - so they're like miniature programs</li>
+		<li>There are two aspects to a function:
+      <ul>
+      	<li><strong>defining</strong> the function</li>
+				<li><strong>using</strong> (running/calling/executing/invoking) the function</li>
+      </ul>
+		</li>
+	</ul>
+
+</section>
+
+<section>
+	<h2>Functions II</h2>
+	<ul class="smaller">
+		<li>Most of the time we'll run pre-defined or "built-in" functions that Processing makes available to us: <br>
+<pre><code>// Run the fullScreen function
+fullScreen();
+
+// Run the rect function and give it some info about what to draw
+rect( 0, 0, 20, 20 );
+</code></pre>
+	  </li>
+    <li>Sometimes we'll define a function which Processing expects to exist, and it will automatically be run for us at the right time:
+<pre><code>void draw(){
+
+  println( frameCount );
+
+} // Need curly brackets at start and end of definition!
+</code></pre>
+
+		</li>
+		<li>Occasionally you might even define, and then later run, your own custom functions</li>
+	</ul>
+</section>
+
+
+<section>
+	<h2>Conditionals</h2>
+	<ul class="smaller">
+		<li>Conditionals, <em>aka</em> branching, <em>aka</em> if-else statements, let our programs do different things at different times, depending on the answers to questions we ask about our data</li>
+		<pre><code>if( userAge >= 18 ){
+  println("You can vote.");
+} else {
+  println("You have no voice in goverment.");
+}
+		</code></pre>
+	</li>
+	<li>The expression inside the if parentheses <code>userAge >= 18</code> is the condition, the question we are asking; it always has a yes/no answer, i.e. a boolean true/false value.</li>
+	<li>You can ask lots of questions to compare data in different ways: <code> ==, <, >, <=, >=, != </code></li>
+	</ul>
+
+</section>
+
+
+
+<section>
+	<h1>LET'S CODE</h1>
+	<img src="img/typingcat.gif" alt="">
+	<!-- <img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif" alt=""> -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+
+        hash: true,  // add slide number to URL for stateful reload
+
+        transition: 'convex',  // 'slide' is the default
+
+				controls: false, // no arrows (annoying bounce)
+
+
+				dependencies: [
+					// { src: '../reveal/plugin/markdown/marked.js' },
+					// { src: '../reveal/plugin/markdown/markdown.js' },
+					{ src: '../reveal/plugin/notes/notes.js', async: true },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
