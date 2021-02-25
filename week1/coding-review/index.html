@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Smart Design: Coding Review</title>
+		<title>Smart Design 2021: Coding Review</title>
 
 		<link rel="stylesheet" href="../reveal/css/reset.css">
 		<link rel="stylesheet" href="../reveal/css/reveal.css">
@@ -73,13 +73,9 @@
 
 
 <section>
-	<h2>Smart Design // BUILD WORKSHOP</h2>
+	<h2>Smart Design 2021 // BUILD WORKSHOP</h2>
 	<hr/>
-	<h1>Coding Review</h1>
-	<!-- <h2>with Processing</h2> -->
-	<!-- <hr/> -->
-	<!-- <p>Luke Hammer</p>
-	<p>Carmen Minikus</p> -->
+	<h2>INTRO & Coding Review</h2>
 </section>
 
 
@@ -91,10 +87,10 @@
 
   <ul>
 		<li>Workshop staff introduction</li>
-		<li>Overview / motivation</li>
+		<li>Admin / Overview / Motivation </li>
 		<li>Core programming concepts</li>
 		<li>Group code-along in Processing</li>
-		<li>Arduino environment setup</li>
+		<!-- <li>Arduino environment setup?</li> -->
 	</ul>
 </section>
 
@@ -104,20 +100,58 @@
 	 <br>
 		 <span class="fragm">Luke Hammer<br>(<a href="mailto:Luke.Hammer@uts.edu.au">Luke.Hammer@uts.edu.au</a>)</span>
 	 <br><br>
-		 <span class="fragm">Carmen Minikus<br>(<a href="mailto:Carmen.Minikus@uts.edu.au">Carmen.Minikus@uts.edu.au</a>)</span>
+		 <span class="fragm">Chris Daniel<br>(<a href="mailto:Christopher.Daniel@uts.edu.au">Christopher.Daniel@uts.edu.au</a>)</span>
 	 <br><br>
+</section>
+
+
+<section>
+   <h2>Admin / Housekeeping</h2>
+	 <ul class="smaller">
+	 	<li class="fragment">Every Friday, 10am-1pm, 2pm-5pm, except StuVac 2-9 April</li>
+	 	<li class="fragment">Attendance is taken every session</li>
+	 	<li class="fragment">Ignore the remote session! It's not for you.</li>
+	 	<li class="fragment">Please wear masks in the classroom, it's official UTS policy</li>
+	 	<li class="fragment">Timeline overview:
+			<ul>
+				<li class="fragment">Weeks <strong>1-3</strong>: Introductory workshops, coding & electronics</li>
+				<li class="fragment">Weeks <strong>4-12</strong>: Project Build Workshops, individual assistance</li>
+				<li class="fragment">Except weeks <strong> 5, 9, 12</strong>: assessment presentations</li>
+				<li class="fragment">i.e. total of <strong>6 x 3hr</strong> build workshops for your projects</li>
+			</ul>
+		</li>
+<li class="fragment">Make good use of them!</li>
+	 </ul>
 
 </section>
+
+
+
+<section>
+   <h2>Guiding Principles</h2>
+	 <p>a.k.a <em>"The Vibe"</em></p>
+	 <hr/>
+	 <ul class="smaller">
+	 	<li class="fragment">Experimental / Experiential</li>
+	 	<li class="fragment">Iterative, feedback, trial & error</li>
+	 	<li class="fragment">Maker / Hacker / DIY Ethos</li>
+		<li class="fragment">Self-driven / independent research / mutual aid</li>
+	 	<li class="fragment">RTFM / STFW</li>
+	 </ul>
+
+</section>
+
+
 
 <section>
    <h2>Why Coding?</h2>
 	 <p>"I Thought This Was a Design Subject"</p>
 	 <hr/>
 	 <ul class="smaller">
-	 	<li class="fragm">The practical project of this subject is to build an <strong>Experience Prototype</strong>: this needs to include integrated electronics (that's the "smart" bit)</li>
-	 	<li class="fragm">To create the interaction effects you want using those electronic components, they need to talk to each other in the right way</li>
-	 	<li class="fragm">It's <strong><em>much</em> easier</strong> to control how they talk to each other by using a <strong>small computer</strong> as the core of the circuit (instead of doing it all in pure low-level electronics)
-		<li class="fragm">This computer is the <strong>microcontroller</strong> (i.e. Arduino), and we need to program it with code, to tell it how to control the electronics</li>
+	 	<li class="fragment">The practical project of this subject is to build an <strong>Experience Prototype</strong>: this needs to include integrated electronics (that's the "smart" bit)</li>
+	 	<li class="fragment">To create the interaction effects you want using those electronic components, they need to talk to each other in the right way</li>
+	 	<li class="fragment">It's <strong><em>much</em> easier</strong> to control how they talk to each other by using a <strong>small computer</strong> as the core of the circuit (instead of doing it all in pure low-level electronics)
+		<li class="fragment">This computer is the <strong>microcontroller</strong> (i.e. Arduino), and we need to program it with code, to tell it how to control the electronics</li>
 	 </ul>
 
 </section>
@@ -127,15 +161,15 @@
 	<h2>But Also! More Generally:</h2>
 
 	<ul>
-		<li class="fragm">Programming is a useful tool (a "transferable skill") for many domains: science, comms, games, art ... interesting and fun?</li>
-		<li class="fragm">...a highly structured, logical approach to solving problems, that you install in your brain</li>
-		<li class="fragm">...and then externalise to a computer</li>
-		<li class="fragm">Software is made out of language: we can create tools just by <em>describing them</em> clearly enough</li>
+		<li class="fragment">Programming is a useful tool (a "transferable skill") for many domains: science, comms, games, design, art ...interesting and fun?</li>
+		<li class="fragment">...a highly structured, logical approach to solving problems, that you install in your brain</li>
+		<li class="fragment">...and then externalise to a computer</li>
+		<li class="fragment">Software is made out of language: we can create tools just by <em>describing them</em> clearly enough</li>
 	</ul>
 
   <br><br>
 
-	<h3>Coding Literacy is the New Literacy</h3>
+	<h3 class="fragment">"Coding Literacy is the New Literacy"</h3>
 
 </section>
 
@@ -144,22 +178,24 @@
 	<h2>What is Coding?</h2>
 
 	<ul class="smaller">
-	  <li clas="fragm">Writing step-by-step instructions in a way a computer can understand in order to solve a problem</li>
-	  <li clas="fragm">...<em>i.e.</em>, being so specific about what you want done, that even a dumb literal computer can do it for you</li>
-		<li clas="fragm">...using a <strong>programming language</strong>, which is halfway between
+	  <li class="fragment">Writing step-by-step instructions in a way a computer can understand in order to solve a problem... kind of like a <strong>recipe</strong></li>
+	  <li class="fragment">...<em>i.e.</em>, being so <a target="_new" href="https://www.azquotes.com/picture-quotes/quote-programs-must-be-written-for-people-to-read-and-only-incidentally-for-machines-to-execute-hal-abelson-66-82-89.jpg">clear and specific</a> about what you want done, that even a dumb literal computer can do it for you</li>
+		<li class="fragment">...using a <strong>programming language</strong>, which is halfway between:
 		  <ul>
-		    <li clas="fragm">vague-but-intuitive <em>human</em> languages, and</li>
-		    <li clas="fragm">the precise-but-difficult language of <em>mathematics</em></li>
+		    <li class="fragment">vague-but-intuitive <em>human</em> languages, and</li>
+		    <li class="fragment">the precise-but-difficult language of <em>mathematics</em></li>
 		  </ul>
 		</li>
-		<li clas="fragm">We'll be using the <strong>Processing</strong> and <strong>Arduino</strong> languages, which are very similar (luckily)</li>
-		<li clas="fragm">Warning! Get comfortable with "<strong>Error-Driven Development</strong>":
+		<li class="fragment">We'll be using the <strong>Processing</strong> and <strong>Arduino</strong> languages - very similar!</li>
+		<li class="fragment">Programs are all a matter of <strong>input</strong> &rarr; <strong>processing</strong> &rarr; <strong>output</strong></li>
+		<li class="fragment">You may have already done programming without knowing it?</li>
+		<li class="fragment">Warning! Get comfortable with "<strong>Error-Driven Development</strong>":
 			<ul>
-				<li clas="fragm"><strong>30%</strong> - writing lines of code</li>
-				<li clas="fragm"><strong>70%</strong> - figuring out why they don't work (usually <strong>typos</strong>)</li>
+				<li class="fragment"><strong>30%</strong> - writing new lines of code</li>
+				<li class="fragment"><strong>70%</strong> - figuring out why they don't work (usually <strong>typos</strong>)</li>
 			</ul>
 		</li>
-		<li>RTFM!</li>
+		<!-- <li class="fragment"><strong>RTFM</strong>! Use the web to find answers! <em>e.g.</em> <strong>processing.org</strong></li> -->
 	</ul>
 
 </section>
@@ -168,11 +204,11 @@
 <section>
 	<h2>Why Processing?</h2>
 	<ul>
-		<li class="fragm">You've already seen it</li>
-		<li class="fragm">It's easy to install and get started with</li>
-		<li class="fragm">It's a very graphical/multimedia-oriented language, created for designers & visual artists</li>
-		<li class="fragm">It's very similar to Arduino</li>
-		<li class="fragm">You might end up connecting your prototype electronics to it anyway</li>
+		<li class="fragment">You've already seen it</li>
+		<li class="fragment">It's easy to install and get started with</li>
+		<li class="fragment">It's a very graphical/multimedia-oriented language, created for designers & visual artists</li>
+		<li class="fragment">It's very similar to Arduino language <span class="fragment">...but it lets us start by focusing on <em>just</em> coding, without also troubleshooting electronic circuits (yet)</li>
+		<li class="fragment">You might end up connecting your prototype electronics to it anyway</li>
 	</ul>
 </section>
 
@@ -183,8 +219,8 @@
 		<li>Data types and variables</li>
 		<li>Functions</li>
 		<li>Conditionals (if/else)</li>
-		<li>Loops?</li>
-		<li>Variable scope?</li>
+		<li>Debugging</li>
+		<li>Loops? Arrays? Variable scope?</li>
 	</ul>
 </section>
 
@@ -196,17 +232,17 @@
 	<p>"What kinds of information can I work with?"</p>
 
 	<ul class="smaller">
-		<li>Numbers:
+		<li class="fragment">Numbers:
        <ul>
-       	<li><strong>int</strong> (integers/whole numbers): <code>1, 73542, -11, 0</code> ... </li>
-       	<li><strong>float</strong> (floating point numbers/decimals/fractions): <code>1.0, 0.5, 3.14159, -84632.1</code> ... </li>
+       	<li class="fragment"><strong>int</strong> (integers/whole numbers): <code>1, 73542, -11, 0</code> ... </li>
+       	<li class="fragment"><strong>float</strong> (floating point numbers/decimals/fractions): <code>1.0, 0.5, 3.14159, -84632.1</code> ... </li>
        </ul>
 		</li>
-		<li><strong>char</strong> (single characters): <code>'a', 'A', 'x', '&'</code> ...</li>
-		<li><strong>String</strong> (longer strings of characters): <code>"Hello World", "My name is Carmen", "Please enter password:"</code>...</li>
-		<li><strong>boolean</strong>: (true/false, yes/no answers): only <code>true, false</code></li>
-		<li>A list of any of the above types ("<strong>array</strong>"): <code>[]</code></li>
-		<li>Lots of custom types <em>i.e.</em> <code>PImage</code> for storing binary image data...</li>
+		<li class="fragment"><strong>char</strong> (single characters): <code>'a', 'A', 'x', '&'</code> ...</li>
+		<li class="fragment"><strong>String</strong> (longer strings of characters): <code>"Hello World", "Please enter password:"</code>...</li>
+		<li class="fragment"><strong>boolean</strong>: (true/false, yes/no answers): only <code>true, false</code></li>
+		<li class="fragment">A list of any of the above types ("<strong>array</strong>"): <code>[]</code></li>
+		<li class="fragment">Lots of custom types <em>i.e.</em> <code>PImage</code> class for storing binary image data...</li>
 	</ul>
 
 </section>
@@ -214,26 +250,27 @@
 <section>
 	<h2>Variables</h2>
 	<ul class="smaller">
-		<li>A variable is a <strong>container</strong> for storing data</li>
-		<li>It lets us give a clear, unique name to a piece of information</li>
-		<li>It has two parts:
+		<li class="fragment">A variable is a <strong>container</strong> for storing data</li>
+		<li class="fragment">It lets us give a clear, unique name to a piece of information</li>
+		<li class="fragment">It has two parts:
       <ul>
-      	<li>a <strong>label</strong> (or "identifier")</li>
-      	<li>the <strong>value</strong> being stored</li>
+      	<li class="fragment">a <strong>label</strong> (or "identifier") - make them as descriptive as possible!</li>
+      	<li class="fragment">the <strong>value</strong> being stored</li>
       </ul>
 		</li>
-		<li>To <em>declare</em> and <em>initialize</em> a variable:</li>
+		<li class="fragment">To <em>declare</em> and <em>initialize</em> a variable:
+		</li>
 	</ul>
-	<pre><code>// Give me a new integer var called age and store 25 into it
+	<pre class="fragment"><code>// Give me a new integer var called age and store 25 into it
 int age = 25;
 
 // Once created, you can change what's stored in it
 age = 30;
 
 // You CAN'T change the TYPE of data you store in it
-age = "Hello!";   // ❌ NO
+age = "Thirty";   // ❌ NO
 
-String greeting = "Hello";    // ✅  OK
+String ageInWords = "Thirty";    // ✅  OK
 	</code></pre>
 </section>
 
@@ -241,15 +278,16 @@ String greeting = "Hello";    // ✅  OK
 <section>
 	<h2>Functions</h2>
 	<ul class="smaller">
-		<li>A function is a named container for some related lines of code</li>
-		<li>One of the most important building blocks of code: most programs are just functions calling each other</li>
-		<li>They can sometimes have inputs (arguments) and outputs (return values) - so they're like miniature programs</li>
-		<li>There are two aspects to a function:
+		<li class="fragment">A function is a named <strong>container</strong> for grouping related <strong>lines of code</strong></li>
+		<li class="fragment">One of the most important building blocks of code: most programs are just functions calling each other (divide and conquer)</li>
+		<li class="fragment">They can sometimes have inputs (<strong>arguments</strong>) and outputs (<strong>return values</strong>) - in this way they're like miniature programs</li>
+		<li class="fragment">There are two aspects to a function:
       <ul>
-      	<li><strong>defining</strong> the function</li>
-				<li><strong>using</strong> (running/calling/executing/invoking) the function</li>
+      	<li class="fragment"><strong>defining</strong> the function (unless it's pre-defined)</li>
+				<li class="fragment"><strong>using</strong> (<em>a.k.a.</em> running/calling/executing/invoking) the function</li>
       </ul>
 		</li>
+		<li class="fragment">Processing comes with a lot of pre-defined functions ready to use. These are like handy little reusable pieces of code, which you can run to carry out common tasks.</li>
 	</ul>
 
 </section>
@@ -257,15 +295,18 @@ String greeting = "Hello";    // ✅  OK
 <section>
 	<h2>Functions II</h2>
 	<ul class="smaller">
-		<li>Most of the time we'll run pre-defined or "built-in" functions that Processing makes available to us: <br>
+		<li class="fragment">Most of the time we'll run pre-defined or "built-in" functions that Processing makes available to us: <br>
 <pre><code>// Run the fullScreen function
 fullScreen();
 
 // Run the rect function and give it some info about what to draw
 rect( 0, 0, 20, 20 );
+
+// Run the random function and save the number it returns into a variable
+int ledBrightness = random( 0, 255 );
 </code></pre>
 	  </li>
-    <li>Sometimes we'll define a function which Processing expects to exist, and it will automatically be run for us at the right time:
+    <li class="fragment">Sometimes we'll define a function which Processing expects to exist, and it will automatically be run for us at the right time:
 <pre><code>void draw(){
 
   println( frameCount );
@@ -274,7 +315,7 @@ rect( 0, 0, 20, 20 );
 </code></pre>
 
 		</li>
-		<li>Occasionally you might even define, and then later run, your own custom functions</li>
+		<li class="fragment">You might even define and later run your own custom functions?</li>
 	</ul>
 </section>
 
@@ -282,16 +323,18 @@ rect( 0, 0, 20, 20 );
 <section>
 	<h2>Conditionals</h2>
 	<ul class="smaller">
-		<li>Conditionals, <em>aka</em> branching, <em>aka</em> if-else statements, let our programs do different things at different times, depending on the answers to questions we ask about our data</li>
-		<pre><code>if( userAge >= 18 ){
-  println("You can vote.");
+		<li class="fragment">Conditionals, <em>a.k.a</em> branching, <em>a.k.a</em> if-else statements, let our programs do different things at different times, depending on the answers to questions we ask about our data:
+		<pre><code>
+if( buttonHeldTime > 1000 ){
+  openDoor();
 } else {
-  println("You have no voice in goverment.");
+  println("Still closed...");
 }
-		</code></pre>
+
+</code></pre>
 	</li>
-	<li>The expression inside the if parentheses <code>userAge >= 18</code> is the condition, the question we are asking; it always has a yes/no answer, i.e. a boolean true/false value.</li>
-	<li>You can ask lots of questions to compare data in different ways: <code> ==, <, >, <=, >=, != </code></li>
+	<li class="fragment">The expression inside the parentheses <code>buttonHeldTime > 1000</code> is the <em>condition</em>, the question we are asking; it always has a yes/no answer, i.e. a boolean true/false value.</li>
+	<li class="fragment">You can ask lots of questions to <strong>compare</strong> data in different ways: <code> ==, <, >, <=, >=, != </code></li>
 	</ul>
 
 </section>
